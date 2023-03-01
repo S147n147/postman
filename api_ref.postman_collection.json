@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "020be6e4-e31b-4791-b595-58916a741cc0",
+		"name": "rest_api_ref",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23942298"
+	},
+	"item": [
+		{
+			"name": "POST_REF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"//fetch request body params\r",
+							"var request= pm.request.toJSON();\r",
+							"console.log(request); \r",
+							"\r",
+							"var requestBody= request.body.raw;\r",
+							"console.log(requestBody); \r",
+							"\r",
+							"var requestBody= JSON.parse(requestBody);\r",
+							"console.log(requestBody); \r",
+							"\r",
+							"let req_name= requestBody.name;\r",
+							"let req_job= requestBody.job;\r",
+							"\r",
+							"\r",
+							"\r",
+							"var responseBody= pm.response.json();\r",
+							"console.log(responseBody);\r",
+							"\r",
+							"\r",
+							"//extract the local\r",
+							"let res_name= responseBody.name;\r",
+							"console.log(res_name);\r",
+							"let res_id= responseBody.id;\r",
+							"console.log(res_id);\r",
+							"let res_job= responseBody.job;\r",
+							"console.log(res_job);\r",
+							"let res_createdAt= responseBody.createdAt;\r",
+							"console.log(res_createdAt);\r",
+							"\r",
+							"//validate the response body parameters\r",
+							"/*pm.test(\"validate response body\", function() {\r",
+							"pm.expect(res_name).equals(\"shubham\");\r",
+							"pm.expect(res_job).equals(\"leader\");\r",
+							"})*/\r",
+							"pm.test(\"validate response body param job\", function() {\r",
+							"pm.expect(res_job).equals(req_job);\r",
+							"})\r",
+							"pm.test(\"validate response body param name\", function() {\r",
+							"pm.expect(res_name).equals(req_name);\r",
+							"})\r",
+							"/*pm.test(\"validate response body param id\", function() {\r",
+							"pm.expect(res_id).to.not.null\r",
+							"})*/\r",
+							"//validate the response body parameters\r",
+							"pm.test(\"validate response body param job\", function() {\r",
+							"pm.expect(res_job).equals(req_job);\r",
+							"})\r",
+							"pm.test(\"validate response body param name\", function() {\r",
+							"pm.expect(res_name).equals(req_name);\r",
+							"})\r",
+							"pm.test(\"validate response body param id\", function() {\r",
+							"pm.expect(res_id).to.not.null\r",
+							"})\r",
+							"let d = new Date(1667789680 * 1000);\r",
+							"   let v =  ('0' + d.getDate()).slice(-2) + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes();\r",
+							"console.log(v);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let first_name= pm.variables.replaceIn('{{$randomFirstName}}')\r",
+							"console.log(first_name) \r",
+							"\r",
+							"pm.collectionVariables.set(\"collection_first_name\",first_name)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{collection_first_name}}\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{POST_URL}}",
+					"host": [
+						"{{POST_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_REF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var responseBody= pm.response.json();\r",
+							"//console.log(responseBody); \r",
+							"\r",
+							"//extract the local\r",
+							"let res_name= responseBody.name;\r",
+							"console.log(res_name);\r",
+							"let res_updatedAt= responseBody.updatedAt;\r",
+							"console.log(res_updatedAt);\r",
+							"let res_job= responseBody.job;\r",
+							"console.log(res_job);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH_REF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var responseBody= pm.response.json();\r",
+							"//console.log(responseBody); \r",
+							"\r",
+							"//extract the local\r",
+							"let res_name= responseBody.name;\r",
+							"console.log(res_name);\r",
+							"let res_job= responseBody.job;\r",
+							"console.log(res_job);\r",
+							"let res_updatedAt= responseBody.updatedAt;\r",
+							"console.log(res_updatedAt);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ram\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL_REF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"//var responseBody= pm.response.json();\r",
+							"//console.log(responseBody); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_REF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var responseBody= pm.response.json();\r",
+							"console.log(responseBody);\r",
+							"\r",
+							"let i=0;\r",
+							"/*while(i<6)\r",
+							"{\r",
+							"    console.log(responseBody.data[i].id);\r",
+							"    console.log(responseBody.data[i].email);\r",
+							"    console.log(responseBody.data[i].first_name);\r",
+							"    console.log(responseBody.data[i].last_name);\r",
+							"    console.log(responseBody.data[i].avatar);\r",
+							"i++;\r",
+							"};*/\r",
+							"//do\r",
+							"do{\r",
+							"    console.log(responseBody.data[i].id);\r",
+							"    console.log(responseBody.data[i].email);\r",
+							"    console.log(responseBody.data[i].first_name);\r",
+							"    console.log(responseBody.data[i].last_name);\r",
+							"    console.log(responseBody.data[i].avatar);\r",
+							"    i++;\r",
+							"} while (i<6);\r",
+							"\r",
+							"\r",
+							"/*for (let i=0; i<6; i++)\r",
+							"{\r",
+							"    array=responseBody.data[i];\r",
+							"\r",
+							"for (attribute in array){\r",
+							"console.log(array[attribute]);\r",
+							"}\r",
+							"};\r",
+							"\r",
+							"/*for (let i=0; i<6; i++)\r",
+							"{\r",
+							"    console.log(responseBody.data[i].id);\r",
+							"    console.log(responseBody.data[i].email);\r",
+							"    console.log(responseBody.data[i].first_name);\r",
+							"    console.log(responseBody.data[i].last_name);\r",
+							"    console.log(responseBody.data[i].avatar);\r",
+							"   \r",
+							"}*/\r",
+							"/*let res_id=responseBody.data[4].id;\r",
+							"console.log(res_id);\r",
+							"let res_email=responseBody.data[4].email;\r",
+							"console.log(res_email);*/\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post2 new",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validate Response code\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"//fetch request body parameter in json format\r",
+							"var request= pm.request.toJSON();\r",
+							"console.log(request);\r",
+							"\r",
+							"//output converted json to string format\r",
+							"var requestBody=request.body.raw;\r",
+							"//output converted string to json format\r",
+							"var requestBody=JSON.parse(requestBody);\r",
+							"let req_name=requestBody.name;\r",
+							"let req_job=requestBody.job;\r",
+							"let req_id=requestBody.id;\r",
+							"\r",
+							"\r",
+							"\r",
+							"//extract the responseBody\r",
+							"var ResponseBody = pm.response.json();\r",
+							"let res_name =ResponseBody.name;\r",
+							"let res_job=ResponseBody.job;\r",
+							"let res_id=ResponseBody.id;\r",
+							"let res_createdAt=ResponseBody.createdAt;\r",
+							"\r",
+							"var api_date=res_createdAt.slice(0,10);\r",
+							"   console.log(api_date);\r",
+							"   var currentDate = new Date();\r",
+							"   console.log(currentDate);\r",
+							"   var currentDate = new Date().toJSON().slice(0, 10);\r",
+							"   console.log(currentDate);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"//validate responsebody parameter\r",
+							"pm.test(\"validate responseBody param name\",function(){\r",
+							"  pm.expect(req_name).eqls(res_name);\r",
+							"});\r",
+							"pm.test(\"validate responseBody param job\",function(){\r",
+							"    pm.expect(req_job).eqls(res_job);  \r",
+							"});\r",
+							"pm.test(\"validate responseBody param id\",function(){\r",
+							"    pm.expect(res_id).to.not.null;\r",
+							"});\r",
+							"pm.test(\"validate responseBody createdAt\",function(){\r",
+							"   \r",
+							"   pm.expect(api_date).eqls(currentDate);\r",
+							"})\r",
+							"\r",
+							"/*let d = new Date(1667789680 * 1000);\r",
+							"   let v =  ('0' + d.getDate()).slice(-2) + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + d.getFullYear() ;\r",
+							"console.log(v);*/\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"var request= pm.request.toJSON();\r",
+							"console.log(request); \r",
+							"\r",
+							"var requestBody= request.body.raw;\r",
+							"console.log(requestBody); \r",
+							"//uttam\r",
+							"var requestBody= JSON.parse(requestBody);\r",
+							"console.log(requestBody); \r",
+							"//response\r",
+							"var responseBody= pm.response.json();\r",
+							"console.log(responseBody);\r",
+							"\r",
+							"/*extract the local\r",
+							"let res_name= responseBody.name;\r",
+							"console.log(res_name);\r",
+							"let res_id= responseBody.id;\r",
+							"console.log(res_id);\r",
+							"let res_job= responseBody.job;\r",
+							"console.log(res_job);\r",
+							"let res_createdAt= responseBody.createdAt;\r",
+							"console.log(res_createdAt);*/\r",
+							"\r",
+							"/*validate the response body parameters\r",
+							"pm.test(\"validate response body\", function() {\r",
+							"pm.expect(res_name).equals(\"shubha\");\r",
+							"pm.expect(res_job).equals(\"leade\");\r",
+							"})*/\r",
+							"/*param\r",
+							"pm.test(\"validate response body param job\", function() {\r",
+							"pm.expect(res_job).equals(\"leader\");\r",
+							"})\r",
+							"pm.test(\"validate response body param name\", function() {\r",
+							"pm.expect(res_name).equals(\"shubham\");\r",
+							"})\r",
+							"pm.test(\"validate response body param id\", function() {\r",
+							"pm.expect(res_id).to.not.null})\r",
+							"let d = new Date(1667789680 * 1000);\r",
+							"   let v =  ('0' + d.getDate()).slice(-2) + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes();\r",
+							"console.log(v);*/\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"shubham\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/login",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get new",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validate Response code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//extract response body\r",
+							"var ResponseBody = pm.response.json();\r",
+							"//console.log(ResponseBody);\r",
+							"\r",
+							"//count variable to save length of ResponseBody\r",
+							"var count = Object.keys(ResponseBody).length;\r",
+							"//for loop statement \r",
+							"for(let i=0;i<count;i++){\r",
+							" array=ResponseBody.data[i];\r",
+							"for(attribute in array){\r",
+							"  console.log(array[attribute]);\r",
+							"}\r",
+							"};\r",
+							"//while loop\r",
+							"let i=0;\r",
+							"while(i<count){\r",
+							"    array=ResponseBody.data[i];\r",
+							"    //console.log(array);\r",
+							"   i++;\r",
+							"};\r",
+							"//extract parameter seperately\r",
+							"/*let res_id=ResponseBody.data[2].id;\r",
+							"console.log(res_id);*/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/unknown/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown/23",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del 10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "pm.test(\"Status code is 204\", function () {\r\n    pm.response.to.have.status(204);\r\n});\r\nvar responseBody= pm.response.json();\r\nconsole.log(responseBody); \r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "po",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "collection_first_name",
+			"value": ""
+		}
+	]
+}
