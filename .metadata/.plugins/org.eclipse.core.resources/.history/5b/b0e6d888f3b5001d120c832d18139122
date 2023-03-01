@@ -1,0 +1,10 @@
+package test;
+
+import org.testng.annotations.Test;
+
+public class factory_runner {
+@Test
+public void Factory1() {
+	System.out.println("Factory1");
+}
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/async-http-client-2.12.3.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/async-http-client-netty-utils-2.12.3.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/auto-common-1.2.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/auto-service-1.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/auto-service-annotations-1.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/byte-buddy-1.12.22.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/checker-qual-3.12.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/error_prone_annotations-2.11.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/failsafe-3.3.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/failureaccess-1.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/guava-31.1-jre.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/j2objc-annotations-1.3.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/jakarta.activation-1.2.2.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/jcommander-1.82.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/jtoml-2.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-buffer-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-codec-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-codec-http-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-codec-socks-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-common-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-handler-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-handler-proxy-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-reactive-streams-2.0.4.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-resolver-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-classes-epoll-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-classes-kqueue-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-native-epoll-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-native-kqueue-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/netty-transport-native-unix-common-4.1.87.Final.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-api-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-api-logs-1.22.0-alpha.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-context-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-exporter-logging-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-common-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-extension-autoconfigure-1.22.0-alpha.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-extension-autoconfigure-spi-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-logs-1.22.0-alpha.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-metrics-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-sdk-trace-1.22.0.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/opentelemetry-semconv-1.22.0-alpha.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/reactive-streams-1.0.4.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-api-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-api-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-chrome-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-chrome-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-chromium-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-chromium-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v85-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v85-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v108-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v108-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v109-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v109-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v110-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-devtools-v110-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-edge-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-edge-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-firefox-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-firefox-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-http-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-http-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-ie-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-ie-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-java-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-java-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-json-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-json-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-manager-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-manager-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-remote-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-remote-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-safari-driver-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-safari-driver-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-support-4.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/selenium-support-4.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/selenium/New folder/selenium-java-4.8.1/New folder/slf4j-api-2.0.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

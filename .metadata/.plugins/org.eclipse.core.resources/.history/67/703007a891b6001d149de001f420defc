@@ -1,0 +1,33 @@
+package test;
+
+public class excel {
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		Readxlsdata read = new Readxlsdata();
+		read.getData("login");
+		}
+		public String[][] getData(String excelSheetName) throws EncryptedDocumentException,
+		IOException {
+		File f = new File(System.getProperty("user.dir" +
+		"\\src\\test\\resources\\testdata\\testdata.xlsx"));
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = WorkbookFactory.create(fis);
+		Sheet sheetName = wb.getSheet(excelSheetName);
+		int totalRows = sheetName.getLastRowNum();
+		System.out.println(totalRows);
+		Row rowCells = sheetName.getRow(0);
+		int totalcols = rowCells.getLastCellNum();
+		System.out.println(totalcols);
+		DataFormatter format = new DataFormatter();
+		String testData[][] = new String[totalRows][totalcols];
+		for (int i = 0; i <= totalRows; i++) {
+		for (int j = 0; i <= totalcols; j++) {
+		testData[i - 1][j] =
+		format.formatCellValue(sheetName.getRow(i).getCell(j));
+		System.out.println(testData[i - 1][j]);
+		}
+		}
+		return testData;
+		}
+		}
+
+

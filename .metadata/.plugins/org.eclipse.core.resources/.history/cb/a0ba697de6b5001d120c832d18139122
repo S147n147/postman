@@ -1,0 +1,16 @@
+package test;
+
+import org.testng.annotations.Test;
+
+public class test2 {
+	@Test(groups = "regression")
+	public void homepage1() {
+		System.out.println("login");
+	}
+
+	@Test(groups = "regression")
+	public void login1() {
+
+		System.out.println("login");
+	}
+}

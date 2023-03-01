@@ -1,0 +1,11 @@
+package test;
+
+import org.testng.annotations.Factory;
+
+public class factory_runner {
+@Factory
+public Object[] RunTests() {
+	return new 	Object[] {new factory()};
+}
+
+}

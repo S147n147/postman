@@ -1,0 +1,11 @@
+package test;
+
+import org.testng.annotations.DataProvider;
+
+public class data_provider {
+
+	@DataProvider(name="testdata")
+	public String[][] initdata() {
+		return new String[][] { { "shubham", "9689152628" }, { "shyam", "9689" }, { "ram", "4563" } };
+	}
+}

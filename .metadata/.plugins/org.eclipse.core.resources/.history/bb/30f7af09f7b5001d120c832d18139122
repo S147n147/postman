@@ -1,0 +1,27 @@
+package test;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class windo {
+	static WebDriver d;
+public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver", "F:\\selenium\\chromedriver.exe");
+	d = new ChromeDriver();
+	d.manage().window().maximize();
+	d.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+	d.findElement(By.id("newWindowBtn")).click();
+	Set<String>parentHandle=d.getWindowHandles();
+	//handle 2 browser
+	//store unique string value
+	Set<String>handles=d.getWindowHandles();
+	for (String handle : handles ) {
+		System.out.println(handle);
+	}
+	Thread.sleep(2000);
+	d.quit();
+}
+}

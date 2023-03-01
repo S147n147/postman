@@ -1,0 +1,41 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class data_provider {
+
+	WebDriver driver;
+	@BeforeClass
+	public void setup() throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver","H:\\it\\selenium\\chromedriver_win32\\chromedriver.exe");
+	driver = new ChromeDriver();
+	driver.manage().window().maximize();
+	Thread.sleep(1000);
+	driver.get("https://login.wordpress.org/");
+	Thread.sleep(1000);
+	}
+	@Test(dataProvider="testdata")
+	public void getdata(String un, String pw) {
+		WebElement un1 =driver.findElement(By.xpath("//input[@id=\"user_login\"]"));
+		un1.clear();
+		un1.sendKeys(un);
+		Thread.sleep(1000);
+		WebElement pd =driver.findElement(By.xpath("//input[@id=\"user_pass\"]"));
+		pd.clear();
+		pd.sendKeys(pw);
+		Thread.sleep(1000);
+		WebElement ln =driver.findElement(By.xpath("//input[@id=\"wp-submit\"]"));
+		ln.click();
+		Thread.sleep(1000);
+	}
+	
+	@DataProvider(name="testdata")
+	public String[][] initdata() {
+		return new String[][] { { "shubham", "9689152628" }, { "shyam", "9689" }, { "ram", "4563" } };
+	}
+}
